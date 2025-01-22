@@ -21,16 +21,35 @@ const data = [
 
 const Accordion = () =>{
     const [activeIndex , setActiveIndex] = useState(null);
-    
+
+    const toggleButton = (index) =>{
+        console.log(index)
+        setActiveIndex(activeIndex === index ? null : index)
+    }
+
     return (
         <>
             <h3>Accordion Application</h3>
             <ul>
-                {data.map((item , index) => <li>
-                    <h4 key={index}>{item.title}</h4>
-                    <span>+</span>
-                    </li>)}
+                {data.map((item , index) => <li key={index}>
+                    <div className='con' onClick={() => toggleButton(index)}>
+                        <h4 >{item.title}</h4>
+                        <span>{activeIndex === index ? "-" : "+"}</span>
+                        
+                    </div>
+                    {activeIndex === index && (<div
+              className="accordion-content"
+              style={{
+                marginBottom: "16px",
+                paddingLeft: "16px",
+                borderLeft: "2px solid #ddd",
+              }}
+            >
+              {item.content}
+            </div>
+          )}
 
+                    </li>)}
             </ul>
         </>
     )
