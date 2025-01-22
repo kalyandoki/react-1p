@@ -2,11 +2,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 70%;
+    width: 80%;
     margin-bottom: 3px;
     padding: 2px;
     border-radius: 10px;
 }
+
 
 h3{
     text-align: center;
