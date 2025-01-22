@@ -40,6 +40,7 @@ const Accordion = () =>{
                     {activeIndex === index && (<div
               className="accordion-content"
             >
+              <hr/>
               {item.content}
             </div>
           )}
