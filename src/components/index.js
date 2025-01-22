@@ -39,11 +39,6 @@ const Accordion = () =>{
                     </div>
                     {activeIndex === index && (<div
               className="accordion-content"
-              style={{
-                marginBottom: "16px",
-                paddingLeft: "16px",
-                borderLeft: "2px solid #ddd",
-              }}
             >
               {item.content}
             </div>
